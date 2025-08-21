@@ -59,3 +59,47 @@
 ## 12. Реестр
 - Win+R → `regedit`.  
 - Проверить ключи:
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FeatureUsage\AppSwitched
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FeatureUsage\ShowJumpView
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Store
+    - HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSavePidlMRU
+
+## 13. Проверка почт
+- Открыть браузер.  
+- Проверить почты на [oplata.info](https://oplata.info).  
+- Прогнать все найденные почты через:
+- [Gmail](https://mail.google.com/mail/u/0/#inbox)  
+- [Яндекс](https://360.yandex.ru/mail/)  
+- [Mail.ru](https://mail.ru/)
+
+## 14. Торговые площадки и форумы
+- Проверить авторизацию:
+- FunPay  
+- GGsell  
+- PlayerOK  
+- Форумы:
+- Phoenix  
+- Evil  
+
+## 15. Process Hacker
+1. Скачать [Process Hacker](https://www.softportal.com/getsoft-14593-process-hacker-3.html) 
+2. Запустить от имени администратора (x64).  
+3. Найти `RustClient.exe` → ПКМ → **Properties** → вкладка **Memory**.  
+4. Нажать **Strings**.  
+5. Ввести `4`, поставить все галочки.  
+6. После загрузки → **Filter → contains (case insensitive)**.  
+7. Поиск по строкам:
+  - Aimbot
+  - ComputeStringHash
+  - facepunch.graphics
+  - norecoil
+  - ExternalCheat_NoRecoil
+  - RustExploit_Injector
+  - Injector
+  - Hack
+  - Facepunch.Sharp
+  - BasicLand
+  - f482aa25-0061-48e7-a4d0-06b8ef97a0a6
+  - data-
+  - plusminus
+  - fake admin
