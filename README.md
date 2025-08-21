@@ -10,7 +10,7 @@
 - **Alt+Enter** → свернуть игру в маленькое окно.  
 - Если интерфейс смещается и багуется → **бан** (признак ImGui-меню).
 
-## 4. LastActivityView
+## 4. LastActivityView **[в крайнем случае]**
 - Скачать [LastActivityView](https://www.nirsoft.net/utils/computer_activity_view.html).  
 - Просмотреть **15–25 приложений от запуска Rust**.  
 - Поискать `Exloader`, `.dll`.  
