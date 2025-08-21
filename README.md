@@ -57,12 +57,13 @@
 - Поиск: `macro`, `cheat`, `vh`, `soft`, `aim`, `макрос`, `аим`, `вх`, `чит`.
 
 ## 12. Реестр
-- Win+R → `regedit`.  
+- Win+R → `regedit`. 
 - Проверить ключи:
     - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FeatureUsage\AppSwitched
     - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FeatureUsage\ShowJumpView
     - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Store
     - HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSavePidlMRU
+- искать файлы с короткими названиями [пример](https://freeimghost.net/images/2025/08/21/imageeac0b94c1a4e8534.png)
 
 ## 13. Проверка почт
 - Открыть браузер.  
@@ -71,9 +72,12 @@
 - [Gmail](https://mail.google.com/mail/u/0/#inbox)  
 - [Яндекс](https://360.yandex.ru/mail/)  
 - [Mail.ru](https://mail.ru/)
+- Discord
+- Funpay
+- Playerok
 
 ## 14. Торговые площадки и форумы
-- Проверить авторизацию:
+- Проверить авторизацию и покупки:
 - FunPay  
 - GGsell  
 - PlayerOK  
