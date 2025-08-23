@@ -74,6 +74,7 @@
 - [Яндекс](https://360.yandex.ru/mail/)  
 - [Mail.ru](https://mail.ru/)
 - Discord
+- Steam
 - Funpay
 - Playerok
 
