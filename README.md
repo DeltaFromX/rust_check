@@ -83,9 +83,6 @@
 - FunPay  
 - GGsell  
 - PlayerOK  
-- Форумы:
-- Phoenix  
-- Evil  
 
 ## 15. Process Hacker
 1. Скачать [Process Hacker](https://www.softportal.com/getsoft-14593-process-hacker-3.html) 
