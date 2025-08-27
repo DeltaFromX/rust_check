@@ -56,6 +56,7 @@
     - Steam
     - FunPay
     - PlayerOK
+15. Прогнать все почты через [Oplata Info](https://oplata.info/info)
 
 ### 5. Process Hacker
 15. Скачать [Process Hacker](https://www.softportal.com/getsoft-14593-process-hacker-3.html).
