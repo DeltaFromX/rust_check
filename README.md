@@ -1,108 +1,89 @@
-# Проверка игрока на читы в Rust
+# Проверка игрока на использование читов в Rust
 
-## 1. Проверка отдачи оружия
-- Проверить отдачу оружия в инвентаре.
+## Шаги проверки
 
-## 2. Консоль
-- Нажать **F1** → **info/net/items/tools/server**.
+### 1. Rust
+1. Проверить отдачу оружия в инвентаре.
+2. Открыть консоль `F1` и проверить вкладки:
+   - Консоль — наличие **debugcamera**.
+   - Вкладка **Tools** — должна быть пустой.
+   - Вкладка **Server** — должна быть пустой.
+3. Нажать `Alt+Enter`, свернуть игру в маленькое окно:
+   - Если интерфейс смещается и багуется → бан (признак ImGui-меню).
 
-## 3. Оконный режим
-- **Alt+Enter** → свернуть игру в маленькое окно.  
-- Если интерфейс смещается и багуется → **бан** (признак ImGui-меню).
+### 2. Windows
+4. На Windows 10 нажать `Win+Tab` и прокрутить файлы вниз.
+5. В **Discord**:
+   - Отправить файл → стрелка у названия файла → прокрутить файлы вниз.
+   - Проверить последние группы и личные чаты (за время игры на сервере).
+6. В **Steam**:
+   - Открыть:  
+     `C:\Program Files (x86)\Steam\config\loginusers.vdf`
+   - Найти по `765` (SteamID).
+   - Проверить наличие игровых банов и блокировок.
+7. В **AppData**:
+   - `Win+R → appdata`
+   - В `AppData\Local\CrashDumps` — подозрительные файлы (читы, макросы, инжекторы).
+   - В `AppData\Roaming` — конфиги читов.
+8. В `%temp%` — проверить временные файлы.
+9. Проверить папку с Rust:
+   - Дата изменения папки **Screenshots**.
+10. Проверить **корзину**.
 
-## 4. LastActivityView **[в крайнем случае]**
-- Скачать [LastActivityView](https://www.nirsoft.net/utils/computer_activity_view.html).  
-- Просмотреть **15–25 приложений от запуска Rust**.  
-- Поискать `Exloader`, `.dll`.  
-- Проверить, запускался ли **CCleaner** перед проверкой.
+### 3. Социальные сети и мессенджеры
+11. **Браузер**:
+    - История по ключевым словам:  
+      `macro`, `cheat`, `vh`, `soft`, `aim`, `lua`, `макрос`, `аим`, `вх`, `чит`.
+    - Проверить загрузки.
+12. **ВКонтакте**:
+    - Слева снизу кнопка **Файлы** → проверить подозрительные.
+    - Поиск по ключевым словам.
+    - Проверить личные сообщения.
+13. **Telegram**:
+    - Проверить поиск по ключевым словам:  
+      `macro`, `cheat`, `vh`, `soft`, `aim`, `макрос`, `аим`, `вх`, `чит`.
+    - Проверить авторизации и покупки на:
+      - FunPay
+      - GGsell
+      - PlayerOK
 
-## 5. Steam
-- Открыть `C:\Program Files (x86)\Steam\config\loginusers.vdf`.  
-- Ctrl+F → `765`.  
-- Проверить на игровые баны и блокировки.
+### 4. Почты
+14. Проверить почтовые аккаунты:
+    - Gmail
+    - Яндекс
+    - Mail.ru
+    - Discord
+    - Steam
+    - FunPay
+    - PlayerOK
 
-## 6. AppData и мышь
-- Win+R → `appdata`.  
-- Проверить мышку:
-  - **Logitech** → `lua`, `txt`.  
-  - **Razer** → `.xml`.  
-  - **Bloody** → `.amc`.  
-- Перейти: `AppData\Local\(mouse name)\scripts`, проверить дату изменения.  
-- В `AppData\Local\CrashDumps` — подозрительные файлы (читы, макросы, инжекторы).  
-- В `AppData\Roaming` — искать конфиги читов.
-- Если есть открыть и проверить программу мыши
+### 5. Process Hacker
+15. Скачать [Process Hacker](https://www.softportal.com/getsoft-14593-process-hacker-3.html).
+16. Запустить от имени администратора (x64).
+17. Найти `RustClient.exe` → ПКМ → **Properties** → вкладка **Memory**:
+    - Отсортировать по весу.
+    - Искать `...cheat.dll`, `loader` и т.п.
+18. Нажать **Strings**:
+    - Ввести `4`, поставить все галочки.
+    - После загрузки → **Filter** → `contains` (case insensitive).
+    - Поискать строки:
+      - `Aimbot`
+      - `ComputeStringHash`
+      - `facepunch.graphics`
+      - `norecoil`
+      - `ExternalCheat_NoRecoil`
+      - `RustExploit_Injector`
+      - `Injector`
+      - `Hack`
+      - `Facepunch.Sharp`
+      - `BasicLand`
+      - `f482aa25-0061-48e7-a4d0-06b8ef97a0a6`
+      - `data-`
+      - `plusminus`
+      - `fake admin`
 
-## 7. Временные файлы
-- Win+R → `%temp%`.
-
-## 8. Папка игры
-- Проверить папку с Rust:  
-  - Подозрительные папки (например, `Skyline`).  
-  - Файлы (например, `imgui.ini`).  
-  - Папку `Screenshots`.
-
-## 9. Проводник
-- Win+E → быстрый доступ, загрузки, другие диски, корзина.
-
-## 10. Браузер и ВК
-- Проверить историю браузера по ключевым словам:  
-  `macro`, `cheat`, `vh`, `soft`, `aim`, `lua`, `макрос`, `аим`, `вх`, `чит`.  
-- Просмотреть загрузки браузера.  
-- ВКонтакте:  
-  - Слева снизу кнопка **файлы** → проверить подозрительные.  
-  - Поиск по ключевым словам.  
-  - Проверить личные сообщения.
-
-## 11. Telegram
-- Если есть — обязательно проверить.  
-- Поиск: `macro`, `cheat`, `vh`, `soft`, `aim`, `макрос`, `аим`, `вх`, `чит`.
-
-## 12. Реестр
-- Win+R → `regedit`. 
-- Проверить ключи:
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FeatureUsage\AppSwitched
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FeatureUsage\ShowJumpView
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Store
-    - HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSavePidlMRU
-- искать файлы с короткими названиями [пример](https://freeimghost.net/images/2025/08/21/imageeac0b94c1a4e8534.png)
-
-## 13. Проверка почт
-- Открыть браузер.  
-- Проверить почты на [oplata.info](https://oplata.info).  
-- Прогнать все найденные почты через:
-- [Gmail](https://mail.google.com/mail/u/0/#inbox)  
-- [Яндекс](https://360.yandex.ru/mail/)  
-- [Mail.ru](https://mail.ru/)
-- Discord
-- Steam
-- Funpay
-- Playerok
-
-## 14. Торговые площадки и форумы
-- Проверить авторизацию и покупки:
-- FunPay  
-- GGsell  
-- PlayerOK  
-
-## 15. Process Hacker
-1. Скачать [Process Hacker](https://www.softportal.com/getsoft-14593-process-hacker-3.html) 
-2. Запустить от имени администратора (x64).  
-3. Найти `RustClient.exe` → ПКМ → **Properties** → вкладка **Memory**.  
-4. Нажать **Strings**.  
-5. Ввести `4`, поставить все галочки.  
-6. После загрузки → **Filter → contains (case insensitive)**.  
-7. Поиск по строкам:
-  - Aimbot
-  - ComputeStringHash
-  - facepunch.graphics
-  - norecoil
-  - ExternalCheat_NoRecoil
-  - RustExploit_Injector
-  - Injector
-  - Hack
-  - Facepunch.Sharp
-  - BasicLand
-  - f482aa25-0061-48e7-a4d0-06b8ef97a0a6
-  - data-
-  - plusminus
-  - fake admin
+### 6. LastActivityView (в крайнем случае)
+19. Скачать [LastActivityView](https://www.nirsoft.net/utils/computer_activity_view.html).
+20. Проверить 15–25 приложений, запущенных после старта Rust.
+21. Ищем: **Exloader**, `.dll`.
+22. Проверить, запускался ли **CCleaner** перед проверкой.
