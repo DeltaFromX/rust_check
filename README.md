@@ -18,7 +18,7 @@
    - Проверить последние группы и личные чаты (за время игры на сервере).
 6. В **Steam**:
    - Открыть:  
-     `C:\Program Files (x86)\Steam\config\loginusers.vdf`
+     `C:\Program Files (x86)\Steam\config\config.vdf`
    - Найти по `765` (SteamID).
    - Проверить наличие игровых банов и блокировок.
 7. В **AppData**:
